@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 
 
 const Dashboard = ({selectedCourses}) => {
+    let totalCourseTime = 0;
+    selectedCourses.map(course=> totalCourseTime = course.credit + totalCourseTime);
+    console.log(totalCourseTime);
     
     return (
         <div className=" text-left">
@@ -17,7 +19,7 @@ const Dashboard = ({selectedCourses}) => {
             }
            </ol>
             <hr />
-            <h2 className="my-2 font-bold">Total Credit Hours : 13</h2>
+            <h2 className="my-2 font-bold">Total Credit Hours : {totalCourseTime}</h2>
             <hr />
             <h2 className="mt-2 font-bold">Total Price : 400 USD</h2>
            </div>
