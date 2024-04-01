@@ -1,0 +1,74 @@
+[
+    {
+      "cover": "../src/img/Rectangle 3.png",
+      "title": "Introduction to Algorithms",
+      "description": "Learn the fundamentals of algorithms and data structures.",
+      "price": 49.99,
+      "credit": 3,
+      "id": "CS101"
+    },
+    {
+      "cover": "../src/img/Rectangle 3-1.png",
+      "title": "Web Development Basics",
+      "description": "Build a strong foundation in web development with HTML, CSS, and JavaScript.",
+      "price": 29.99,
+      "credit": 2,
+      "id": "CS102"
+    },
+    {
+      "cover": "../src/img/Rectangle 2.png",
+      "title": "Database Management Systems",
+      "description": "Explore the principles and practices of database management.",
+      "price": 39.99,
+      "credit": 3,
+      "id": "CS103"
+    },
+    {
+      "cover": "../src/img/Rectangle 2-6.png",
+      "title": "Object-Oriented Programming",
+      "description": "Master the concepts of object-oriented programming using Java.",
+      "price": 49.99,
+      "credit": 3,
+      "id": "CS104"
+    },
+    {
+      "cover": "../src/img/Rectangle 2-5.png",
+      "title": "Data Structures in Python",
+      "description": "Learn how to implement various data structures using Python.",
+      "price": 34.99,
+      "credit": 3,
+      "id": "CS105"
+    },
+    {
+      "cover": "../src/img/Rectangle 2-4.png",
+      "title": "Software Engineering Principles",
+      "description": "Discover the principles and best practices of software engineering.",
+      "price": 44.99,
+      "credit": 3,
+      "id": "CS106"
+    },
+    {
+      "cover": "../src/img/Rectangle 2-3.png",
+      "title": "Computer Networks Fundamentals",
+      "description": "Understand the basics of computer networks and protocols.",
+      "price": 39.99,
+      "credit": 3,
+      "id": "CS107"
+    },
+    {
+      "cover": "../src/img/Rectangle 2-2.png",
+      "title": "Artificial Intelligence Essentials",
+      "description": "Explore the core concepts and applications of artificial intelligence.",
+      "price": 54.99,
+      "credit": 3,
+      "id": "CS108"
+    },
+    {
+      "cover": "../src/img/Rectangle 2-1.png",
+      "title": "Cybersecurity Fundamentals",
+      "description": "Gain insights into cybersecurity threats and preventive measures.",
+      "price": 49.99,
+      "credit": 3,
+      "id": "CS109"
+    }
+  ]
