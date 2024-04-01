@@ -10,7 +10,7 @@ const Course = ({course, handleSelectedCourses}) => {
                 <p><i className="fa-solid fa-dollar-sign"></i> Price : {price}</p>
                 <p> <i className="fa-solid fa-book-open"></i> Credit : {credit} hrs</p>
             </div>
-            <button onClick={handleSelectedCourses}  className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            <button onClick={()=>handleSelectedCourses(course)}  className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
   Select
 </button>
         </div>

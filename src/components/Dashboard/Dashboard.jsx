@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 
-const Dashboard = () => {
-    const [courses, setCourses] = useState([]);
-    useEffect(()=>{
-        fetch("courses.json")
-        .then(res=> res.json())
-        .then(data=> setCourses(data))
-    },[])
+
+const Dashboard = ({selectedCourses}) => {
+    
     return (
         <div className=" text-left">
            <div className="bg-white rounded-lg p-8">
@@ -16,7 +13,7 @@ const Dashboard = () => {
            <h2 className="text-3xl font-bold mt-2">Course name</h2>
            <ol className="pl-4">
             {
-                courses.map(course=><li style={{listStyle:"decimal"}} className="text-gray-600" key={course.id}>{course.title}</li> )
+                selectedCourses.map(course=><li style={{listStyle:"decimal"}} className="text-gray-600" key={course.id}>{course.title}</li> )
             }
            </ol>
             <hr />
@@ -28,6 +25,10 @@ const Dashboard = () => {
     );
 };
 
+
+Dashboard.propTypes = {
+    selectedCourses: PropTypes.array.isRequired,
+  };
 
 
 export default Dashboard;
