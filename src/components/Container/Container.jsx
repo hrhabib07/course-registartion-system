@@ -5,16 +5,38 @@ import Dashboard from "../Dashboard/Dashboard";
 
 const Container = () => {
     const [selectedCourse, setSelectedCourse] = useState([]);
+    let timeLimitAlert;
     const checkPrevious = () =>{
         return selectedCourse.length;
     }
     const handleSelectedCourses = (course) =>{
         const preview = checkPrevious();
+
+    let totalCourseTime =0;
+    selectedCourse.map(course=>{
+        totalCourseTime = course.credit + totalCourseTime;
+    });
+    if(totalCourseTime === 14){
+        const newTime = course.credit;
+        if(newTime===6){
+            return;
+        }
+    } else if ( totalCourseTime === 15){
+        const newTime = course.credit;
+        if(newTime===6){
+            return;
+        }  
+    }
+    if(totalCourseTime>=15 && course.credit >=6 || totalCourseTime>=16 && course.credit >= 5 || totalCourseTime>=17 && course.credit >=4 ||  totalCourseTime>=18 && course.credit >=3 ||   totalCourseTime>=19 && course.credit >=2 || totalCourseTime>=20 && course.credit >= 1){
+
+        timeLimitAlert = "You can't add more than 20 credits"
+    } else{
+        
         if(preview){
             const exist = selectedCourse.some(cour => cour.id === course.id);
             if(exist){
                 console.log("exist");
-            } else{
+            }  else{
                 const previousSelection = [...selectedCourse];
                 previousSelection.push(course);
                 setSelectedCourse(previousSelection);
@@ -23,8 +45,8 @@ const Container = () => {
             const previousSelection = [course];
             setSelectedCourse(previousSelection); 
         }
-        }
-        console.log(selectedCourse);
+    }    
+}
   
     return (
         <div className="lg:flex justify-center gap-5 my-12 mx-auto">
